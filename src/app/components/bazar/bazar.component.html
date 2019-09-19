@@ -1,0 +1,23 @@
+<h1>{{bazar.nombre | uppercase}}</h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img width="100%" src="{{bazar.img}}" class="img-fluis" alt="{{bazar.nombre}}">
+        <br><br>
+        <a [routerLink]="['/bazares']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-4">
+        <h2>{{bazar.nombre}}</h2>
+        <hr>
+        <p>
+            {{bazar.info}}
+        </p>
+        <div>
+            <img width="15%" src="assets/img/facebook.png" alt=""> {{bazar.fb}}
+            <hr>
+            <img width="15%" src="assets/img/instagram.png" alt=""> {{bazar.insta}}
+
+        </div>
+    </div>
+
+</div>

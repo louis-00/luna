@@ -1,0 +1,30 @@
+<h1>Buscando: <small>{{texto}}</small></h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="bazares.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-warning" role="alert">
+            No existen resultados para: {{texto}}
+        </div>
+    </div>
+
+</div>
+
+<div class="card-columns">
+
+    <app-bazar-card class="d-inline-block text-truncate" style="width: 100%;" [bazar]="bazar" [index]="bazar.idx" *ngFor="let bazar of bazares; let i = index"></app-bazar-card>
+
+    <!-- <div class="card animated fadeIn fast" *ngFor="let bazar of bazares; let i = index">
+          bazares es la variable que se encuentra en bazares.component.ts  
+        <img src="{{bazar.img}}" class="card-img-top img-fluid" alt="{{bazar.nombre}}">
+        <div class="card-block">
+            <h5 class="card-title">{{bazar.nombre}}</h5>
+            <p class="card-text">{{bazar.info}}</p>
+            <p class="card-text"><small class="text-muted">{{bazar.insta}}</small></p>
+
+            <button (click)="verBazar(i)" type="button" class="btn btn-outline-dark btn-block">
+                Ver más...
+            </button>
+             <a [routerLink]="['/bazar',i]" class="btn btn-outline-dark btn-block">Ver más...</a> 
+        </div>
+    </div> -->
+</div>

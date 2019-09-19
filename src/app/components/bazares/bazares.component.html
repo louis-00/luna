@@ -1,0 +1,6 @@
+<h1>Bazares <small>Varios.</small></h1>
+<hr>
+
+<div class="card-columns">
+    <app-bazar-card class="d-inline-block text-truncate" style="width: 100%;" (bazarSeleccionado)="verBazar($event)" [bazar]="bazar" [index]="i" *ngFor="let bazar of bazares; let i = index"></app-bazar-card>
+</div>

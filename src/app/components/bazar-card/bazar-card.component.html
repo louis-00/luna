@@ -1,0 +1,14 @@
+<div class="card animated fadeIn fast">
+    <!--bazares es la variable que se encuentra en bazares.component.ts  -->
+    <img src="{{bazar.img}}" class="card-img-top img-fluid" alt="{{bazar.nombre}}">
+    <div class="card-block">
+        <h5 class="card-title">{{bazar.nombre}}</h5>
+        <p class="card-text">{{bazar.info}}</p>
+        <p class="card-text"><small class="text-muted">{{bazar.insta}}</small></p>
+
+        <button (click)="verBazar()" type="button" class="btn btn-outline-dark btn-block">
+                Ver más...
+            </button>
+        <!-- <a [routerLink]="['/bazar',i]" class="btn btn-outline-dark btn-block">Ver más...</a> -->
+    </div>
+</div>
